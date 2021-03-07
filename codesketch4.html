@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		.door{
+			width:200px;
+		
+			background-position:center;
+			height:400px;
+			position:relative;
+			display:inline-block;
+			background-size:contain;
+			background-repeat:no-repeat;
+			background-image: url(https://p7.hiclipart.com/preview/768/175/591/window-door-closer-hinge-lock-wood-door-png.jpg);
+
+			
+			background-color:lightblue;
+		}
+
+		#door1{
+				transition:1s;
+			background-color:rgba(166, 234, 153, 1.0);
+		}
+
+		#door3{
+			background-color:lightpink;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+<div class="door" id="door1"></div>
+<div class="door" id="door2"></div>
+<div class="door" id="door3"></div>
+
+	<script type="text/javascript">
+
+		 
+		 var doorlist = [1,2,3]
+		 
+		var array = [false, false, false];
+		array[0] = true;
+		console.log(array[0]);
+
+		 door1.addEventListener("click",function Math.random(doorlist){
+		 	
+
+		 	door2.style.backgroundImage = "url(goat.png)";
+		 	console.log("You got a goat.");
+
+		 	door.style.backgroundColor = "rgba(166, 234, 153, 0.5)";
+		 })
+		 door1.addEventListener("dblclick",function openDoor1(){
+		 door1.style.backgroundImage = "url(goat.png)";
+		 })
+
+		 door2.addEventListener("click",function openDoor1(){
+		 	door1.style.backgroundImage = "url(goat.png)";
+		 })
+		 door2.addEventListener("dblclick",function openDoor2(){
+		 	door2.style.backgroundImage = "url(goat.png)";
+		 	console.log("You got a goat.");
+		 })
+		
+		door3.addEventListener("click",function openDoor1(){
+			door1.style.backgroundImage = "url(goat.png)"
+		})
+
+		door3.addEventListener("dblclick",function openDoor3(){
+			door3.style.backgroundImage = "url(https://lh3.googleusercontent.com/proxy/15a340ZqjeY3XS8PJEvM9hc7io6c-6IKqm4ZD8AqwF-o7LwycGHQtzW4cKA8nbrMPhN3t98oS8YZ_YJ9QEGMOiXn3_M32_HlevquoMbb_8ebLTNn9ljp-lFDhuSZPA)"
+			console.log("You won!");
+		})
+
+
+	</script>
+
+</body>
+</html>

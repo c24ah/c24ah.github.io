@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+		.door{
+			width:32%;
+			background-position:center;
+			height:400px;
+			transform: translate(0,15%);
+			position:relative;
+			display:inline-block;
+			background-size:contain;
+			background-repeat:no-repeat;
+			margin-right: auto;
+			background-image: url(https://p7.hiclipart.com/preview/768/175/591/window-door-closer-hinge-lock-wood-door-png.jpg);
+
+			
+			background-color:lightblue;
+		}
+
+		#door1{
+				transition:1s;
+			background-color:rgba(166, 234, 153, 1.0);
+		}
+
+		#door3{
+			background-color:lightpink;
+		}
+		h1{
+			text-align: center;
+		}
+		body{
+
+
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<h1>
+		Monty Hall Problem
+	</h1>
+	<center>
+		<p>
+	Your objective is to open the door with a car behind it. Click once on any door to open it. The door you choose will not be opened. Instead, a door with a goat behind it will open. You can then either switch your guess to the other opened door, or stay with your initial guess. To guess again, double click on the door.
+		</p>
+	</center>
+
+<div class="door" id="door1"></div>
+<div class="door" id="door2"></div>
+<div class="door" id="door3"></div>
+
+	<script type="text/javascript">
+
+		 var door1 = document.getElementById("door1");
+		 var door2 = document.getElementById("door2");
+		 var door3 = document.getElementById("door3");
+
+		 door1.addEventListener("click",function openDoor2(){
+		 	
+
+		 	door2.style.backgroundImage = "url(goat.png)";
+		 	console.log("You got a goat.");
+
+		 	door.style.backgroundColor = "rgba(166, 234, 153, 0.5)";
+		 })
+		 door1.addEventListener("dblclick",function openDoor1(){
+		 door1.style.backgroundImage = "url(goat.png)";
+		 })
+
+		 door2.addEventListener("click",function openDoor1(){
+		 	door1.style.backgroundImage = "url(goat.png)";
+		 })
+		 door2.addEventListener("dblclick",function openDoor2(){
+		 	door2.style.backgroundImage = "url(goat.png)";
+		 	console.log("You got a goat.");
+		 })
+		
+		door3.addEventListener("click",function openDoor1(){
+			door1.style.backgroundImage = "url(goat.png)"
+		})
+
+		door3.addEventListener("dblclick",function openDoor3(){
+			door3.style.backgroundImage = "url(https://lh3.googleusercontent.com/proxy/15a340ZqjeY3XS8PJEvM9hc7io6c-6IKqm4ZD8AqwF-o7LwycGHQtzW4cKA8nbrMPhN3t98oS8YZ_YJ9QEGMOiXn3_M32_HlevquoMbb_8ebLTNn9ljp-lFDhuSZPA)"
+			console.log("You won!");
+		})
+
+		
+	</script>
+
+</body>
+</html>
