@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+    </title>
+    <style type="text/css">
+    body{
+        background-image: url(https://cdn.wallpapersafari.com/99/90/GSML3c.jpg);
+    }
+    .wolves {
+        position: relative;
+        display: inline-block;
+        width: 200px;
+        height: 150px;
+        background-size: cover;
+        background-image: url(https://media.tenor.com/images/40723d2509ab23bac3dc108957164657/tenor.gif);
+
+        animation-name: chasing;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        top: 500px;
+    }
+
+    .sheep{
+
+        background-image:url(sheep.gif);
+        background-size:contain;
+         position: relative;
+        display: inline-block;
+        width: 200px;
+        height: 100px;
+        animation-name:run;
+        animation-duration:4s;
+        animation-iteration-count: infinite;
+        top:500px;
+    }
+    @keyframes chasing {
+        0% {
+            transform: rotate(0deg);
+            left: 1400px;
+
+        }
+
+        25% {
+            transform: rotate(-45deg);
+            left: 1200px;
+           
+        }
+
+        50% {
+            transform: rotate(0deg);
+            left: 1000px;
+
+          
+        }
+
+        75% {
+            transform: rotate(45deg);
+            left: 900px;
+            
+        }
+
+        100% {
+            transform: rotate(0deg);
+            left: 800px;
+    }
+
+}
+
+
+
+    @keyframes run {
+        0% {
+            transform:rotate(0deg);
+            left:400px;
+           
+        }
+
+        25% {
+            transform:(45deg);
+            left:300px;
+        }
+
+        37.5% {
+            transform: (45deg);
+            left:200px;
+        }
+
+        50% {
+            transform:(90deg);
+            left:150px;
+        }
+        62.5% {
+            transform: (100deg);
+            left: 100px
+        }
+
+        75% {
+          transform:(120deg);
+          left:50px;
+        }
+
+        100% {
+            transform:(0deg);
+            left:0px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>
+        Wolf Chasing Sheep
+    </h1>
+    </center>
+    
+    
+    <div class="wolves" id="wolf1"></div>
+    <div class="sheep" id="sheep1"></div>
+    <div class="sheep" id="sheep2"></div>
+    <div class="sheep" id="sheep3"></div>
+    
+</body>
+
+</html>
