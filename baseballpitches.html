@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+		#pitch{
+			width:900px;
+			height:900px;
+		
+			background-size:contain;
+			background-repeat: no-repeat;
+		}
+	</style>
+</head>
+<body>
+
+	<center>
+
+		<h1>Click to see different baseball pitches</h1>
+		
+		
+		<div id="pitch">
+			
+		</div>
+	</center>
+
+	<script type="text/javascript">
+
+		
+
+		//Math.random() is a function that already exists in javascript that generates random number between 0 and 1//
+		var text = "error"
+
+		var cores = ["purple", "green", "blue", "red", "violet", "magenta", "black", "orange"]
+
+		var kartinkye = ["url(fastball.gif)", 
+
+		"url(changeup.gif)", 
+
+		"url(curveball.gif)", 
+
+		"url(slider.gif)", 
+
+		"url(cutter.gif)",
+
+		"url(sinker.gif)",
+
+		"url(knuckleball.gif)"
+		]
+var box = document.getElementById('pitch');
+
+		box.addEventListener("click", function(){
+
+			var pig = Math.floor(Math.random()*7);
+
+			console.log(cores[pig])
+
+			box.style.backgroundImage = kartinkye[pig];
+
+
+			//box.style.backgroundColor = cores[pig];
+			box.style.backgroundColor = "white";
+
+
+		})
+		pitch.style.backgroundImage = "url(baseball.png)"
+
+
+	</script>
+
+</body>
+</html>
