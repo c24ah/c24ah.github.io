@@ -12,18 +12,22 @@
 			background-size:contain;
 			background-repeat: no-repeat;
 		}
+
+		.description{
+			width: 900px;
+			height: 900px;
+			position: relative;		}
 	</style>
 </head>
 <body>
 
 	<center>
 
-		<h1>Click to see different baseball pitches</h1>
+		<h1>Click to see a random baseball pitch</h1>
 		
 		
-		<div id="pitch">
-			
-		</div>
+		<div id="pitch"></div>
+		<div id="description"></div>
 	</center>
 
 	<script type="text/javascript">
@@ -31,9 +35,9 @@
 		
 
 		//Math.random() is a function that already exists in javascript that generates random number between 0 and 1//
-		var text = "error"
 
-		var cores = ["purple", "green", "blue", "red", "violet", "magenta", "black", "orange"]
+
+		var ball = ["fastball", "changeup", "curveball", "slider", "cutter", "sinker", "knuckleball"]
 
 		var kartinkye = ["url(fastball.gif)", 
 
@@ -49,23 +53,36 @@
 
 		"url(knuckleball.gif)"
 		]
-var box = document.getElementById('pitch');
+		
+
+		
+		var box = document.getElementById('pitch');
 
 		box.addEventListener("click", function(){
 
-			var pig = Math.floor(Math.random()*7);
+		var pig = Math.floor(Math.random()*7);
+		
 
-			console.log(cores[pig])
+		console.log(ball[pig])
 
-			box.style.backgroundImage = kartinkye[pig];
+		box.style.backgroundImage = kartinkye[pig];
 
 
-			//box.style.backgroundColor = cores[pig];
-			box.style.backgroundColor = "white";
+			//box.style.backgroundColor = ball[pig];
+		box.style.backgroundColor = "white";
 
 
 		})
 		pitch.style.backgroundImage = "url(baseball.png)"
+
+
+	
+		
+		
+		
+
+
+		
 
 
 	</script>
