@@ -6,17 +6,24 @@
 	<style type="text/css">
 		
 		#pitch{
-			width:900px;
-			height:900px;
-		
+			width:800px;
+			height:500px;
+			position: relative;
 			background-size:contain;
 			background-repeat: no-repeat;
+			text-align: center;
 		}
 
-		.description{
-			width: 900px;
-			height: 900px;
-			position: relative;		}
+		#description{
+			font-size: 42px;
+			width: 100px;
+			height: 100px;
+			background-color: white;
+			left: 800;
+			right: 800;
+			text-align: center;
+		
+				}
 	</style>
 </head>
 <body>
@@ -37,9 +44,12 @@
 		//Math.random() is a function that already exists in javascript that generates random number between 0 and 1//
 
 
+
+		
+
 		var ball = ["fastball", "changeup", "curveball", "slider", "cutter", "sinker", "knuckleball"]
 
-		var kartinkye = ["url(fastball.gif)", 
+		var strike = ["url(fastball.gif)", 
 
 		"url(changeup.gif)", 
 
@@ -54,7 +64,7 @@
 		"url(knuckleball.gif)"
 		]
 		
-
+		var description = document.getElementById('description');
 		
 		var box = document.getElementById('pitch');
 
@@ -65,7 +75,9 @@
 
 		console.log(ball[pig])
 
-		box.style.backgroundImage = kartinkye[pig];
+		box.style.backgroundImage = strike[pig];
+		description.innerText = ball[pig];
+		
 
 
 			//box.style.backgroundColor = ball[pig];
