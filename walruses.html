@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+		.walrus{
+			width:300px;
+			height:300px;
+			background-image:url(walrus.gif);
+			background-size:contain;
+			background-repeat: no-repeat;
+			display: inline-block;
+			/*this is the styling for div with the class of walrus
+		}
+	</style>
+	<center><h1>Walrus Maker</h1></center>
+</head>
+<body>
+	 
+
+
+
+
+<script type="text/javascript">
+	
+	function makeWalruses (){
+		var walrus = document.createElement("div");
+		// this is the walrus function that makes the walruss div and puts it into the body of the html document. The div has the styling of walrus
+
+		document.body.appendChild(walrus);
+		// adds a "child", which is eomthing inside of something else, in the body. It puts the div in the body
+		walrus.classList.add('walrus');
+		// Adds the class of walrus to each new div created
+
+		
+	}
+	for (var counter = 0; counter<1000; counter=counter+1){
+		makeWalruses()
+	}
+
+	
+// this is the function that makes the walruss, and it is being run 3 times because it appears 3 times
+
+
+
+</script>
+
+
+</body>
+</html>
