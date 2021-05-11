@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+		#ranunculus{
+			width:100px;
+			height:100px;
+			background-color:blue;
+			background-size: contain;
+			background-image:url("flower.png");
+		}
+		body{
+			background-image: url(mothersdaycard.jpeg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
+</head>
+<body>
+
+<center><div id="ranunculus"></div>
+</center>
+
+	<audio id="song" src="music.mp3"></audio>
+
+<script type="text/javascript">
+	
+
+	var box = document.getElementById("ranunculus");
+
+
+var song = document.getElementById("song");
+
+//add 1 each time you click to something (array or variable)//
+
+var day =0;
+
+box.addEventListener("click", function(){
+day = day + 1;
+console.log(day)
+
+
+
+if(day%2 == 1) {
+	box.style.backgroundColor ="red";
+	song.play();}
+
+else if (day%2 ==0) {
+	box.style.backgroundColor ="blue";
+	song.pause();
+}
+})
+
+
+
+
+
+
+</script>
+</body>
+</html>
