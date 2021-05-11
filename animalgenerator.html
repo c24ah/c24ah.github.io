@@ -2,27 +2,106 @@
 <html>
 <head>
 	<title></title>
+
 	<style type="text/css">
+		
 		#animal{
-			height: 300px;
-			width: 300px;
-			background-color: green;
+			width:800px;
+			height:500px;
+			position: relative;
+			background-size:contain;
+			background-repeat: no-repeat;
+			text-align: center;
 		}
+
+		#description{
+			font-size: 42px;
+			width: 100px;
+			height: 100px;
+			background-color: white;
+			left: 800;
+			right: 800;
+			text-align: center;
+		
+				}
 	</style>
-	
-	
 </head>
 <body>
-	<div id="animal"></div>
-	<script type="text/javascript">
-		var farm = ["Pig", "Goat", "Cow", "Horse", "Chicken", "Donkey", "Sheep", "Duck", ]
-		var animal = document.getElementById('animal')
-		animal.addEventListener('click', function(){
-			var creature = (Math.random()*7);
-			console.log(creature[farm]);
-		})
-	</script>
 
+	<center>
+
+		<h1>Click to see a random farm animal</h1>
+		
+		
+		<div id="animal"></div>
+		<div id="description"></div>
+	</center>
+
+	<script type="text/javascript">
+
+		
+
+		//Math.random() is a function that already exists in javascript that generates random number between 0 and 1//
+
+
+
+		
+
+		var creature = ["Pig", "Goat", "Cow", "Horse", "Chicken", "Donkey", "Sheep", "Duck"]
+
+		var strike = ["url(pig.jpeg)", 
+
+		"url(goat.jpeg)", 
+
+		"url(cow.jpeg)", 
+
+		"url(horse.jpeg)", 
+
+		"url(chicken.jpeg)",
+
+		"url(donkey.jpeg)",
+
+		"url(sheep.jpeg)",
+
+		"url(duck.jpeg)"
+
+		
+		]
+		
+		var description = document.getElementById('description');
+		
+		var box = document.getElementById('animal');
+
+		box.addEventListener("click", function(){
+
+		var organism = Math.floor(Math.random()*7);
+		
+
+		console.log(creature[organism])
+
+		box.style.backgroundImage = strike[organism];
+		description.innerText = creature[organism];
+		
+
+
+			//box.style.backgroundColor = creature[organism];
+		box.style.backgroundColor = "white";
+
+
+		})
+		animal.style.backgroundImage = "url(farm.jpeg)"
+
+
+	
+		
+		
+		
+
+
+		
+
+
+	</script>
 
 </body>
 </html>

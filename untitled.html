@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#animal{
+			height: 300px;
+			width: 300px;
+			background-color: green;
+		}
+	</style>
+	
+	
+</head>
+<body>
+	<div id="animal"></div>
+	<script type="text/javascript">
+		var farm = ["Pig", "Goat", "Cow", "Horse", "Chicken", "Donkey", "Sheep", "Duck", ]
+		var animal = document.getElementById('animal')
+		animal.addEventListener('click', function(){
+			var creature = (Math.random()*7);
+			console.log(creature[farm]);
+		})
+	</script>
+
+
+</body>
+</html>
