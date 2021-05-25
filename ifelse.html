@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		.door
+		{
+			height: 300px;
+			width: 300px;
+			background-color: red;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div class="door" id="door1">
+	</div>
+	<div class="door" id="door2">
+		
+	</div>
+	<div class="door" id="door3">
+		
+	</div>
+
+<script type="text/javascript">
+	
+	var door1 = document.getElementById("door1")
+	var door2 = document.getElementById("door2")
+	var door3 = document.getElementById("door3")
+	var counter = 0
+
+	door1.addEventListener("click",function(){
+		counter = counter+1;
+		if(counter%2==1){
+			door1.style.backgroundImage="url(goat.png)"
+		}
+		else(counter%2==0){}
+	})
+</script>
+</body>
+</html>

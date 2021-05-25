@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		.door
+		{
+			background-image:url(door.jpeg);
+			height: 300px;
+			width: 300px;
+			background-color: red;
+			margin: 5px;
+			background-repeat:no-repeat;
+			background-size: contain;
+			position: relative;
+			margin: none;
+			background-position: center;
+			height: 400px;
+			width: 32%;
+			display: inline-block;
+			transform: translate(0,10%);}
+
+			body{
+				font-size: 24px;
+			}
+
+
+	</style>
+</head>
+<body>
+	<center>
+	<h1>
+		The Monty Hall Problem
+	</h1>
+	
+		<p>
+	Your objective is to open the door with a car behind it. Click once on any door to open it. The door you choose will not be opened. Instead, a door with a goat behind it will open (you are not trying to get the goat). You can then either switch your guess to the other unopened door, or stay with your initial guess. To guess again, click again on the door.
+		</p>
+	</center>
+	<div></div>
+	<div class="door" id="door1">
+	</div>
+	<div class="door" id="door2">
+		
+	</div>
+	<div class="door" id="door3">
+		
+	</div>
+	
+
+
+<script type="text/javascript">
+	
+	var door1 = document.getElementById("door1");
+	var door2 = document.getElementById("door2");
+	var door3 = document.getElementById("door3");
+	var counter = 0;
+
+	door1.addEventListener("click", function(){
+
+	
+	 	counter = counter+1;
+	 	if(counter%2==1){
+	 		door2.style.backgroundImage="url(goat.png)";
+	 		door1.style.backgroundImage="url(door.jpeg)"
+		}
+		else if (counter%2==0){ 
+			door1.style.backgroundImage="url(goat.png)";
+			door2.style.backgroundImage="url(door.jpeg)";
+		}
+})
+
+	door2.addEventListener("click", function(){
+		counter = counter+1;
+		if(counter%2==1){
+			door1.style.backgroundImage="url(goat.png)";
+			door2.style.backgroundImage="url(door.jpeg)"
+		}
+		else if(counter%2==0){
+			door2.style.backgroundImage="url(goat.png)"
+			door1.style.backgroundImage="url(door.jpeg)"
+		}
+	})
+
+	door3.addEventListener("click", function(){
+		counter = counter+1;
+		if(counter%2==1){
+			door2.style.backgroundImage="url(goat.png)";
+			door3.style.backgroundImage="url(door.jpeg)";
+
+		}
+		else if(counter%2==0){
+			door3.style.backgroundImage="url(car.png)";
+			door2.style.backgroundImage="url(door.jpeg";
+			door1.style.backgroundImage="url(door.jpeg)"
+		}
+	})
+
+
+
+	
+</script>
+</body>
+</html>

@@ -56,19 +56,10 @@
 	<script type="text/javascript">
 
 
-var day =0;
-		 var door1 = document.getElementById("door1");
-		 var door2 = document.getElementById("door2");
-		 var door3 = document.getElementById("door3");
+
 
 		 door1.addEventListener("click",function openDoor2(){
-day = day + 1;
-console.log(day)
-		 if(day%2 == 1) {
-	door2.style.backgroundImage ="goat.png";
-	
 
-else if (day%2 ==0) {
 	door2.style.backgroundImage ="url(goat.png)";
 		 	
 
@@ -76,7 +67,7 @@ else if (day%2 ==0) {
 		 	
 
 		 	door.style.backgroundColor = "rgba(166, 234, 153, 0.5)";
-		 }
+		 })
 		 door1.addEventListener("dblclick",function openDoor1(){
 		 door1.style.backgroundImage = "url(goat.png)";
 		 })
