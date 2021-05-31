@@ -35,7 +35,7 @@
 	</h1>
 	
 		<p>
-	Your objective is to open the door with a car behind it. Click once on any door to open it. The door you choose will not be opened. Instead, a door with a goat behind it will open (you are not trying to get the goat). You can then either switch your guess to the other unopened door, or stay with your initial guess. To guess again, click again on the door.
+	Your objective is to open the door with a car behind it. Click once on any door to open it. The door you choose will not be opened. Instead, a different door with a goat behind it will open (you are not trying to get the goat). You can then either switch your guess to the other unopened door, or stay with your initial guess. To guess again, on one of the remaining unopened doors.
 		</p>
 	</center>
 	<div></div>
@@ -64,10 +64,12 @@
 	 	if(counter%2==1){
 	 		door2.style.backgroundImage="url(goat.png)";
 	 		door1.style.backgroundImage="url(door.jpeg)"
+	 		door3.style.backgroundImage="url(door.jpeg)"
 		}
 		else if (counter%2==0){ 
 			door1.style.backgroundImage="url(goat.png)";
 			door2.style.backgroundImage="url(door.jpeg)";
+			door3.style.backgroundImage="url(door.jpeg)"
 		}
 })
 
@@ -76,10 +78,13 @@
 		if(counter%2==1){
 			door1.style.backgroundImage="url(goat.png)";
 			door2.style.backgroundImage="url(door.jpeg)"
+			door3.style.backgroundImage="url(door.jpeg)"
 		}
 		else if(counter%2==0){
 			door2.style.backgroundImage="url(goat.png)"
 			door1.style.backgroundImage="url(door.jpeg)"
+			door3.style.backgroundImage="url(door.jpeg)"
+		
 		}
 	})
 
@@ -88,11 +93,12 @@
 		if(counter%2==1){
 			door2.style.backgroundImage="url(goat.png)";
 			door3.style.backgroundImage="url(door.jpeg)";
+			door1.style.backgroundImage="url(door.jpeg)";
 
 		}
 		else if(counter%2==0){
 			door3.style.backgroundImage="url(car.png)";
-			door2.style.backgroundImage="url(door.jpeg";
+			door2.style.backgroundImage="url(door.jpeg)";
 			door1.style.backgroundImage="url(door.jpeg)"
 		}
 	})
